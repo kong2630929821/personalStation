@@ -1,0 +1,61 @@
+<view class='loginBox'>
+<image class="login-body {{avatar?'linear':''}}" src="{{avatar}}">
+ <!-- 登录 -->
+ <view wx:if="{{show==2}}" class='login-view'>
+    <view class="snow-container">
+    <image class="owl-login {{addClass?addClass:''}}" src="../../images/login/owl-login@2x.png">
+      <view class="hand"></view>
+      <view class="hand hand-r"></view>
+      <view class="arms">
+          <image class="arm" src="../../images/login/owl-login-arm@2x.png"></image>
+          <image class="arm arm-r" src="../../images/login/owl-login-arm@2x.png"></image>
+      </view>
+    </image>
+  </view>
+  <view class="webdesigntuts-workshop">
+    <input maxlength='15' class="{{type==0?'inputfocus':''}}" bindtap="bindButtonTap" placeholder="账号" value='{{account}}'/>
+    <input maxlength='15' type='password' class="pass {{type==1?'inputfocus':''}}" bindtap="bindPass" placeholder="密码" value='{{password}}'/>
+    <view class='login' bindtap='login'>登录</view>
+    <view class="btnGroupL">
+      <view class="btn" bindtap='toRegister'>注册</view>
+      <view class="btn" bindtap='toWx'>微信</view>
+    </view>
+     <button class="btnHid" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+  </view>
+ </view>
+ <!-- 微信登录 -->
+ <view wx:if="{{show==1}}" class="userInfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class='in' bindtap='wxLogin'>登录</view>
+    <view class="btnGroupW">
+      <view class="btn" bindtap='toRegister'>注册</view>
+      <view class="btn" bindtap='account'>账号</view>
+    </view>
+ </view>
+ <!-- 注册 -->
+  <view wx:if="{{show==3}}" class='register-view'>
+    <view class="snow-container">
+    <image class="owl-login {{addClass?addClass:''}}" src="../../images/login/owl-login@2x.png">
+      <view class="hand"></view>
+      <view class="hand hand-r"></view>
+      <view class="arms">
+          <image class="arm" src="../../images/login/owl-login-arm@2x.png"></image>
+          <image class="arm arm-r" src="../../images/login/owl-login-arm@2x.png"></image>
+      </view>
+    </image>
+  </view>
+  <view class="webdesigntuts-workshop">
+    <input maxlength='15' class="{{type==1?'inputfocus':''}}" bindtap="bindButtonTap" placeholder="账号" value='{{account}}'/>
+    <input maxlength='15' type='password' class="pass {{type==2?'inputfocus':''}}" bindtap="bindPass" placeholder="密码" value='{{password}}'/>
+    <input maxlength='15' type='password' class="twoPass {{type==3?'inputfocus':''}}" bindtap="bindTwoPass" placeholder="重复密码" value='{{passwordTwo}}'/>
+    <view class='register' bindtap='register'>注册</view>
+    <view class="btnGroup">
+      <view class="btn" bindtap='account'>账号</view>
+      <view class="btn" bindtap='toWx'>微信</view>
+    </view>
+    <button class="btnHid" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  </view>
+ </view>
+</image>
+</view>
