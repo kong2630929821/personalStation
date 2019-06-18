@@ -1,4 +1,5 @@
 <view class='loginBox'>
+<i-spin class="spin" size="large" fix wx:if="{{ spinShow }}">123</i-spin>
 <image class="login-body {{avatar?'linear':''}}" src="{{avatar}}">
  <!-- 登录 -->
  <view wx:if="{{show==2}}" class='login-view'>
@@ -13,8 +14,8 @@
     </image>
   </view>
   <view class="webdesigntuts-workshop">
-    <input maxlength='15' class="{{type==0?'inputfocus':''}}" bindtap="bindButtonTap" placeholder="账号" value='{{account}}'/>
-    <input maxlength='15' type='password' class="pass {{type==1?'inputfocus':''}}" bindtap="bindPass" placeholder="密码" value='{{password}}'/>
+    <input maxlength='15' class="{{type==1?'inputfocus':''}}" bindtap="bindButtonTap" placeholder="账号" value='{{account}}'/>
+    <input maxlength='15' type='password' class="pass {{type==2?'inputfocus':''}}" bindtap="bindPass" placeholder="密码" value='{{password}}'/>
     <view class='login' bindtap='login'>登录</view>
     <view class="btnGroupL">
       <view class="btn" bindtap='toRegister'>注册</view>

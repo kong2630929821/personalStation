@@ -16,7 +16,8 @@ Page({
     account:'111',
     password:'',
     passwordTwo:'',
-    show:2
+    show:2,
+    spinShow: false
   },
   //账号登录
   login(){
@@ -26,14 +27,20 @@ Page({
   wxLogin(){
     console.log(app.globalData.userInfo)
     if (app.globalData.userInfo){
-      wx.navigateTo({
-        url: '../home/home'
-      })
+      //调用登录加载
+      this.setData({
+        spinShow:true
+      });
+      setTimeout(()=>{
+        wx.navigateTo({
+          url: '../home/home'
+        });
+        //  不允许返回
+        // wx.redirectTo({
+        //   url: '../home/home'
+        // })
+      },3000);
     }
-    //不允许返回
-    // wx.redirectTo({
-    //   url: '../home/home'
-    // })
   },
   //去微信登录
   getUserInfo(e){
@@ -117,14 +124,17 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    //当页面隐藏时取消加载动画
+    this.setData({
+      spinShow: false
+    });
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    
   },
 
   /**
