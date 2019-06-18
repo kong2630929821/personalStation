@@ -1,22 +1,19 @@
-// pages/home/home.js
+// pages/me/me.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    current: 'homepage'
+    userName: ''
   },
-  handleChange({ detail }) {
-    this.setData({
-      current: detail.key
-    });
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
@@ -30,12 +27,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const arr = ['我', '爱', '你', '!'];
-    arr.forEach((item, index) => {
-      wx.setTabBarBadge({
-        index: index,
-        text: item
-      })
+    this.setData({
+      userName: getApp().globalData.userInfo || { nickName:'小仙女'}
     })
   },
 

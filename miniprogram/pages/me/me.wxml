@@ -1,0 +1,2 @@
+<!--pages/me/me.wxml-->
+<view>{{userName.nickName}}</view>

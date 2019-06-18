@@ -1,7 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/home/home"
+    "pages/home/home",
+    
+    "pages/community/community",
+    "pages/photo/photo",
+    "pages/me/me"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -10,5 +15,37 @@
     "navigationBarTitleText": "Personal Station",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "debug": true,
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/tarBarIcon/homeEd.png",
+        "iconPath": "images/tarBarIcon/home.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/tarBarIcon/sheEd.png",
+        "iconPath": "images/tarBarIcon/she.png",
+        "pagePath": "pages/community/community",
+        "text": "社区"
+      },
+      {
+        "selectedIconPath": "images/tarBarIcon/photoEd.png",
+        "iconPath": "images/tarBarIcon/photo.png",
+        "pagePath": "pages/photo/photo",
+        "text": "相册"
+      },
+      {
+        "selectedIconPath": "images/tarBarIcon/meEd.png",
+        "iconPath": "images/tarBarIcon/me.png",
+        "pagePath": "pages/me/me",
+        "text": "我"
+      }
+    ]
+  }
 }

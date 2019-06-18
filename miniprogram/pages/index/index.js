@@ -13,7 +13,7 @@ Page({
     head:'',
     timer:null,
     userInfo:{},
-    account:'111',
+    account:'1506069361',
     password:'',
     passwordTwo:'',
     show:2,
@@ -21,7 +21,20 @@ Page({
   },
   //账号登录
   login(){
-
+    if(this.data.account=='1506069361'&&this.data.password=='sgf19960920'){
+      this.setData({
+        spinShow: true
+      });
+      setTimeout(() => {
+        wx.reLaunch({
+          url: '../home/home'
+        });
+        //  不允许返回
+        // wx.redirectTo({
+        //   url: '../home/home'
+        // })
+      }, 3000);
+    }
   },
   //微信登录
   wxLogin(){
@@ -32,7 +45,7 @@ Page({
         spinShow:true
       });
       setTimeout(()=>{
-        wx.navigateTo({
+        wx.reLaunch({
           url: '../home/home'
         });
         //  不允许返回
