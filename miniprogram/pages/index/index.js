@@ -21,6 +21,8 @@ Page({
   },
   //账号登录
   login(){
+    console.log(this.data.account, '2222=?', this.data.password);
+    console.log(this.data.account == '1506069361' && this.data.password == 'sgf19960920');
     if(this.data.account=='1506069361'&&this.data.password=='sgf19960920'){
       this.setData({
         spinShow: true
@@ -101,10 +103,30 @@ Page({
       type:2
     })
   },
-  bindButtonTap() {
+  //点击账号输入框
+  bindButtonTap(e) {
     this.setData({
       addClass: '',
       type:1
+    })
+  },
+  //用户输入账号
+  inputAccount(e){
+    console.log(e.detail.value);
+    this.setData({
+      account: e.detail.value
+    })
+  },
+  //用户输入密码
+  inputPassWord(e){
+    this.setData({
+      password: e.detail.value
+    })
+  },
+  //用户注册时输入第二次密码
+  inputPassWordTwo(e){
+    this.setData({
+      passwordTwo: e.detail.value
     })
   },
   onGotUserInfo: function (e) {

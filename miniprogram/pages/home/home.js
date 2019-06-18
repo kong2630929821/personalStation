@@ -30,12 +30,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const arr = ['我', '爱', '你', '!'];
-    arr.forEach((item, index) => {
-      wx.setTabBarBadge({
-        index: index,
-        text: item
-      })
+    wx.setTabBarBadge({
+      index: 1,
+      text: '99+'
     })
   },
 

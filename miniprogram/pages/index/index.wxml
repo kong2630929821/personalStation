@@ -14,8 +14,8 @@
     </image>
   </view>
   <view class="webdesigntuts-workshop">
-    <input maxlength='15' class="{{type==1?'inputfocus':''}}" bindtap="bindButtonTap" placeholder="账号" value='{{account}}'/>
-    <input maxlength='15' type='password' class="pass {{type==2?'inputfocus':''}}" bindtap="bindPass" placeholder="密码" value='{{password}}'/>
+    <input maxlength='15' class="{{type==1?'inputfocus':''}}" bindinput="inputAccount" bindtap="bindButtonTap" placeholder="账号" value='{{account}}'/>
+    <input maxlength='15' type='password' class="pass {{type==2?'inputfocus':''}}" bindinput="inputPassWord" bindtap="bindPass" placeholder="密码" value='{{password}}'/>
     <view class='login' bindtap='login'>登录</view>
     <view class="btnGroupL">
       <view class="btn" bindtap='toRegister'>注册</view>
@@ -47,9 +47,9 @@
     </image>
   </view>
   <view class="webdesigntuts-workshop">
-    <input maxlength='15' class="{{type==1?'inputfocus':''}}" bindtap="bindButtonTap" placeholder="账号" value='{{account}}'/>
-    <input maxlength='15' type='password' class="pass {{type==2?'inputfocus':''}}" bindtap="bindPass" placeholder="密码" value='{{password}}'/>
-    <input maxlength='15' type='password' class="twoPass {{type==3?'inputfocus':''}}" bindtap="bindTwoPass" placeholder="重复密码" value='{{passwordTwo}}'/>
+    <input maxlength='15' class="{{type==1?'inputfocus':''}}" bindinput="inputAccount" bindtap="bindButtonTap" placeholder="账号" value='{{account}}'/>
+    <input maxlength='15' type='password' class="pass {{type==2?'inputfocus':''}}" bindinput="inputPassWord" bindtap="bindPass" placeholder="密码" value='{{password}}'/>
+    <input maxlength='15' type='password' class="twoPass {{type==3?'inputfocus':''}}" bindinput="inputPassWordTwo" bindtap="bindTwoPass" placeholder="重复密码" value='{{passwordTwo}}'/>
     <view class='register' bindtap='register'>注册</view>
     <view class="btnGroup">
       <view class="btn" bindtap='account'>账号</view>
