@@ -5,7 +5,8 @@
     
     "pages/community/community",
     "pages/photo/photo",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/other/other"
     
   ],
   "window": {

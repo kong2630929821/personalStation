@@ -1,2 +1,15 @@
 <!--pages/home/home.wxml-->
-<text>我</text>
+
+<view bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" class="home">
+  <i-drawer mode="left" visible="{{showLeft1}}" bind:close="toggleLeft1">
+    <view class="demo-container">
+      <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+      <view class="info">
+        <text class="userinfo-nickname">{{userInfo.nickName}}{{userinfo.gender}}</text>
+        <image src="{{userInfo.gender==1?'../../images/sex/male.png':'../../images/sex/female.png'}}" class="sex"></image>
+      </view>
+      <text>瓜皮{{userInfo.nickName}}</text>
+    </view>
+  </i-drawer>
+  <i-button bindtap="toggleLeft1" type="ghost">左滑动有话要说</i-button>
+</view>

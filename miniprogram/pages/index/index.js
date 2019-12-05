@@ -47,13 +47,13 @@ Page({
         spinShow:true
       });
       setTimeout(()=>{
-        wx.reLaunch({
-          url: '../home/home'
-        });
-        //  不允许返回
-        // wx.redirectTo({
+        // wx.reLaunch({
         //   url: '../home/home'
-        // })
+        // });
+        //  允许返回
+        wx.navigateTo({
+          url: '../other/other'
+        })
       },3000);
     }
   },
